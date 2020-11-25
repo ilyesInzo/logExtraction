@@ -51,8 +51,8 @@ public class ELKSearch {
 	private static String KBN_XSRF = "kbn-xsrf";
 	private static String LOCATION = "Location";
 	
-	private static String USERNAME = "ilyes.mansour@focus-corporation.com";
-	private static String PASSWORD = "Psy4tr@1";
+	private static String USERNAME = "Your e-mail";
+	private static String PASSWORD = "Your password";
 	
 
 	private void getTokenAccess() throws RequestProcessException {

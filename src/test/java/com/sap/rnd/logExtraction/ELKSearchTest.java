@@ -7,6 +7,7 @@ import java.time.LocalDateTime;
 import org.junit.Test;
 
 import com.sap.rnd.logExtraction.exception.RequestProcessException;
+import com.sap.rnd.logExtraction.helper.JsonHelper;
 import com.sap.rnd.logExtraction.pojo.KibanaResponse;
 
 /**
@@ -24,14 +25,16 @@ public class ELKSearchTest
 	@Test
 	public void testKibanaInfo() {
 		
-
 		try {
 			KibanaResponse kibanaResponse = elkSearch.getLogs(null,LocalDateTime.now().minusDays(1), LocalDateTime.now(), 0);
 			assertNotNull(kibanaResponse);
+			System.out.println(JsonHelper.writeObjectToJsonString(kibanaResponse));
 		} catch (RequestProcessException e) {
 			e.printStackTrace();
+		} catch (Exception e) {
+			e.printStackTrace();
 		}
-		
+
 	}
 	
 
